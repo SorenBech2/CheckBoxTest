@@ -1,11 +1,15 @@
-﻿namespace SfRadioButton_test
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+
+namespace SfRadioButton_test
 {
-    public partial class TestDataModel
+    public partial class TestDataModel : ObservableObject
     {
         public int Id { get; set; }
 
-        public string Name { get; set; } = null!;
+        [ObservableProperty]
+        public string? name;
 
-        public bool IsActive { get; set; } = false;
+        [ObservableProperty]
+        public bool isActive = false;
     }
 }
