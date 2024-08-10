@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:SfRadioButton_test"
+             xmlns:model="clr-namespace:SfRadioButton_test"
+             xmlns:SfListView="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
+             xmlns:SfButtons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons"
+             x:DataType="model:TestViewModel"
+             x:Class="SfRadioButton_test.TestPage"
+             Title="TestPage">
+
+    <VerticalStackLayout WidthRequest="400" >
+        <SfListView:SfListView ItemsSource="{Binding EntityList}"
+            MaximumHeightRequest="250" WidthRequest="355" ItemSize="50" ItemSpacing="0,0,0,10"
+            EmptyView="No Items" SelectionMode="Single" SelectedItem="{Binding SelectedEntity}">
+            <SfListView:SfListView.ItemTemplate>
+                <DataTemplate x:DataType="model:TestDataModel">
+                    <Grid RowDefinitions="50" ColumnDefinitions="50,260,40" >
+                        <BoxView Grid.Column="0" 
+                            CornerRadius="7" WidthRequest="45" HeightRequest="45" BackgroundColor="LightGray" />
+                        <SfButtons:SfRadioButton Grid.Column="0" 
+                            IsChecked="{Binding IsActive}" WidthRequest="40"/>
+                        <BoxView Grid.Column="1" Grid.ColumnSpan="2" 
+                            CornerRadius="7" HeightRequest="45" Margin="5,0,0,0" BackgroundColor="LightGray"/>
+                        <Label Grid.Column="1"
+                            Text="{Binding Name}" FontSize="Medium" FontAttributes="Bold"
+                            VerticalTextAlignment="Center" Margin="25,0,0,0"/>
+                    </Grid>
+                </DataTemplate>
+            </SfListView:SfListView.ItemTemplate>
+            <SfListView:SfListView.SelectedItemTemplate>
+                <DataTemplate x:DataType="model:TestDataModel">
+                    <Grid RowDefinitions="50" ColumnDefinitions="50,260,40" >
+                        <BoxView Grid.Column="0" BackgroundColor="White"
+                            CornerRadius="7" WidthRequest="45" HeightRequest="45" Color="DarkGray"/>
+                        <SfButtons:SfRadioButton Grid.Column="0" 
+                            IsChecked="{Binding IsActive}" WidthRequest="40"/>
+                        <BoxView Grid.Column="1" Grid.ColumnSpan="2" 
+                            CornerRadius="7" HeightRequest="45" Margin="5,0,0,0" BackgroundColor="White"
+                            Color="DarkGray"/>
+                        <Label Grid.Column="1" 
+                            Text="{Binding Name}" FontSize="Medium" FontAttributes="Bold" VerticalTextAlignment="Center" Margin="25,0,0,0"/>
+                    </Grid>
+                </DataTemplate>
+            </SfListView:SfListView.SelectedItemTemplate>
+        </SfListView:SfListView>
+
+        <Label Text="Change Item's active status" TextDecorations="Underline" FontSize="16" FontAttributes="Bold" HorizontalOptions="Center" 
+            HeightRequest="40" WidthRequest="290" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+            TextColor="Black">
+            <Label.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding ChangeActiveCommand}" NumberOfTapsRequired="1" />
+            </Label.GestureRecognizers>
+        </Label>
+
+        <Label Text="Change Item's active status again" TextDecorations="Underline" FontSize="16" FontAttributes="Bold" HorizontalOptions="Center" 
+            HeightRequest="40" WidthRequest="290" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+            TextColor="Black">
+            <Label.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding ChangeActiveAgainCommand}" NumberOfTapsRequired="1" />
+            </Label.GestureRecognizers>
+        </Label>
+
+        <HorizontalStackLayout Margin="20,20,0,0">
+            <Label Text="Entity 1 IsActive is: "/>
+            <Label Text="{Binding EntityList[0].IsActive}"/>
+            <Label Text="   Entity 1 Name is: "/>
+            <Label Text="{Binding EntityList[0].Name}"/>
+        </HorizontalStackLayout>
+        <HorizontalStackLayout Margin="20,20,0,0">
+            <Label Text="Entity 2 IsActive is: "/>
+            <Label Text="{Binding EntityList[1].IsActive}"/>
+        </HorizontalStackLayout>
+        <HorizontalStackLayout Margin="20,20,0,0">
+            <Label Text="Entity 3 IsActive is: "/>
+            <Label Text="{Binding EntityList[2].IsActive}"/>
+        </HorizontalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>
