@@ -1,6 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 
-namespace SfRadioButton_test
+namespace CheckBoxTest
 {
     public partial class TestDataModel : ObservableObject
     {

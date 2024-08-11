@@ -1,7 +1,7 @@
 ﻿using Android.App;
 using Android.Runtime;
 
-namespace SfRadioButton_test
+namespace CheckBoxTest
 {
     [Application]
     public class MainApplication : MauiApplication

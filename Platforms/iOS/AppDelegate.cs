@@ -1,6 +1,6 @@
 ﻿using Foundation;
 
-namespace SfRadioButton_test
+namespace CheckBoxTest
 {
     [Register("AppDelegate")]
     public class AppDelegate : MauiUIApplicationDelegate

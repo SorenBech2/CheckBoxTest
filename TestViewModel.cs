@@ -3,7 +3,7 @@ using CommunityToolkit.Mvvm.Input;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 
-namespace SfRadioButton_test
+namespace CheckBoxTest
 {
     public partial class TestViewModel : ObservableObject, INotifyPropertyChanged
     {

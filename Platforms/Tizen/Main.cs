@@ -2,7 +2,7 @@ using Microsoft.Maui;
 using Microsoft.Maui.Hosting;
 using System;
 
-namespace SfRadioButton_test
+namespace CheckBoxTest
 {
     internal class Program : MauiApplication
     {

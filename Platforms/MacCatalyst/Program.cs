@@ -1,7 +1,7 @@
 ﻿using ObjCRuntime;
 using UIKit;
 
-namespace SfRadioButton_test
+namespace CheckBoxTest
 {
     public class Program
     {

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:viewmodel="clr-namespace:SfRadioButton_test"
-             xmlns:model="clr-namespace:SfRadioButton_test"
+             xmlns:viewmodel="clr-namespace:CheckBoxTest"
+             xmlns:model="clr-namespace:CheckBoxTest"
              xmlns:SfListView="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
              xmlns:SfButtons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons"
              x:DataType="model:TestViewModel"
-             x:Class="SfRadioButton_test.TestPage"
+             x:Class="CheckBoxTest.TestPage"
              Title="TestPage">
 
     <VerticalStackLayout WidthRequest="400" >

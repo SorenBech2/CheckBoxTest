@@ -1,8 +1,8 @@
 ﻿<maui:MauiWinUIApplication
-    x:Class="SfRadioButton_test.WinUI.App"
+    x:Class="CheckBoxTest.WinUI.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:maui="using:Microsoft.Maui"
-    xmlns:local="using:SfRadioButton_test.WinUI">
+    xmlns:local="using:CheckBoxTest.WinUI">
 
 </maui:MauiWinUIApplication>
